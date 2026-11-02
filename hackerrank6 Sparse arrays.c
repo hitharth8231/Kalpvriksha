@@ -70,7 +70,7 @@ int main()
         }
     }
 
-    printf(fptr, "\n");
+    fprintf(fptr, "\n");
 
     return 0;
 }
