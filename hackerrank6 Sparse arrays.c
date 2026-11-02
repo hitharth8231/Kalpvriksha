@@ -37,7 +37,7 @@ int* matchingStrings(int stringList_count, char** stringList, int queries_count,
 
 int main()
 {
-    FILE* fptr = fopen(getenv("OUTPUT_PATH"), "w");
+   FILE* fptr = stdout;
 
     int stringList_count = parse_int(ltrim(rtrim(readline())));
 
@@ -70,9 +70,7 @@ int main()
         }
     }
 
-    fprintf(fptr, "\n");
-
-    fclose(fptr);
+    printf(fptr, "\n");
 
     return 0;
 }
