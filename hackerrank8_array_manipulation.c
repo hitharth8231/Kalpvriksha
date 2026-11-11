@@ -74,7 +74,7 @@ int main()
     }
     
     long result = arraymanipulation(arr_size,number_of_queries,queries);
-    printf("Maximum value: %ld\n", result);
+    printf("Maximum value: %d\n", result);
 
     for (int i = 0; i < number_of_queries; i++)
     {
