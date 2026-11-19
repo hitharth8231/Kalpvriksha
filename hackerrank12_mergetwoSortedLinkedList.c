@@ -53,10 +53,14 @@ Node* createlinkedlist(int size)
 
 Node* mergeTwoLists(Node *head1, Node *head2)
 {
-    Node dummy;
-    dummy.next = NULL;
-
-    Node *tail = &dummy;
+    Node* dummy = malloc(sizeof(Node));
+    if(dummy == NULL)
+       {
+        printf("Memory allocation faliure!");
+        return NULL;
+       }
+    dummy->next = NULL;
+    Node *tail = dummy;
 
     while(head1 != NULL && head2 != NULL)
     {
@@ -79,7 +83,7 @@ Node* mergeTwoLists(Node *head1, Node *head2)
     else
         tail->next = head2;
 
-    return dummy.next;
+    return dummy->next;
 }
 
 int main()
